@@ -1,8 +1,13 @@
 fn main() {
-    another_function(5, 6);
+    let x = 5;
+    let y = {
+        let x = x-2;
+        x + 1
+    };
+
+    another_function(y);
 }
 
-fn another_function(x: i32, y: i32) {
-    println!("The x value is: {}", x);
-    println!("The y value is: {}", y);
+fn another_function(a: i32) {
+    println!("The a value is: {}", a);
 }
