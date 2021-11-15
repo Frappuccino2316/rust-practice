@@ -1,16 +1,12 @@
 fn main() {
-    let s = String::from("Hello");
-    takes_ownership(s);
+    let s1 = String::from("hellofheafaekrbi");
 
-    let x = 5;
-    makes_copy(x);
-    println!("{}", x);
+    let (s2, len) = calculate_length(s1);
+
+    println!("The length of '{}' is {}", s2, len);
 }
 
-fn takes_ownership(some_string: String) {
-    println!("some_string: {}", some_string);
-}
-
-fn makes_copy(some_integer: i32) {
-    println!("sone_integer: {}", some_integer);
+fn calculate_length(s: String) -> (String, usize) {
+    let length = s.len();
+    (s, length)
 }
