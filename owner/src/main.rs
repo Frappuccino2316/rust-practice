@@ -1,5 +1,10 @@
 fn main() {
-    let mut s = String::from("hello");
-    s.push_str(", world!");
-    println!("{}", s);
+    let mut x = 5;
+    let y = x;
+    println!("{}", x);
+    println!("{}", y);
+
+    let x = 6;
+    println!("{}", x);
+    println!("{}", y);
 }
