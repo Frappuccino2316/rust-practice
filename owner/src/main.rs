@@ -1,9 +1,16 @@
 fn main() {
     let s = String::from("hello world");
+    let word = first_word(&s);
+    println!("{}", word);
+}
 
-    let hello = &s[0..5];
-    let world = &s[6..11];
+fn first_word(s: &str) -> &str {
+    let bytes = s.as_bytes();
 
-    println!("{}", hello);
-    println!("{}", world);
+    for (i, &item) in bytes.iter().enumerate() {
+        if item == b' ' {
+            return &s[..i]
+        }
+    }
+    &s[..]
 }
