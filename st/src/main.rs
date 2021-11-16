@@ -1,21 +1,12 @@
 fn main() {
-    let user1 = build_user(String::from("user1@example.com"), String::from("user1"));
+    let rect1 = (30, 50);
 
-    println!("{}", user1.username);
+    println!(
+        "The area of the rectangle is {} square pixels.",
+        area(rect1)
+    );
 }
 
-fn build_user(email: String, username: String) -> User {
-    User {
-        email,
-        username,
-        sign_in_count: 1,
-        active: true,
-    }
-}
-
-struct User {
-    email: String,
-    username: String,
-    sign_in_count: u64,
-    active: bool,
+fn area(dimensions: (u32, u32)) -> u32 {
+    dimensions.0 * dimensions.1
 }
