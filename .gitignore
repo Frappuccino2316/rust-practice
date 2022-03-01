@@ -1,3 +1,5 @@
 */target
 iced/
 egui_test/
+.DS_Store
+*/.DS_Store
